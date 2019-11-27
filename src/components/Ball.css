@@ -1,0 +1,13 @@
+.Ball {
+  background-color: coral;
+  height: 2.25em;
+  width: 2.25em;
+  padding: 0.25em;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: white;
+  display: inline-block;
+  text-align: center;
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "image": "/images/banner.png",
+    "character": "Bruce Banner"
+  },
+  {
+    "id": 2,
+    "image": "/images/blackpanther.png",
+    "character": "Black Panther"
+  },
+  {
+    "id": 3,
+    "image": "/images/cap.png",
+    "character": "Steve Rodgers"
+  },
+  {
+    "id": 4,
+    "image": "/images/danvers.png",
+    "character": "Carol Danvers"
+  },
+  {
+    "id": 5,
+    "image": "/images/doc.png",
+    "character": "Dr Strange"
+  },
+  {
+    "id": 6,
+    "image": "/images/falcon.png",
+    "character": "Falcon"
+  },
+  {
+    "id": 7,
+    "image": "/images/gamora.png",
+    "character": "Gamora"
+  },
+  {
+    "id": 8,
+    "image": "/images/hulk.png",
+    "character": "Hulk"
+  },
+  {
+    "id": 9,
+    "image": "/images/parker.png",
+    "character": "Peter Parker"
+  },
+  {
+    "id": 10,
+    "image": "/images/shuri.png",
+    "character": "Shuri"
+  },
+  {
+    "id": 11,
+    "image": "/images/stark.png",
+    "character": "Tony Stark"
+  },
+  {
+    "id": 12,
+    "image": "/images/starlord.png",
+    "character": "Star Lord"
+  },
+  {
+    "id": 13,
+    "image": "/images/thor.png",
+    "character": "Thor"
+  },
+  {
+    "id": 14,
+    "image": "/images/wanda.png",
+    "character": "Wanda Maximoff"
+  }
+]
