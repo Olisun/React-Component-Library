@@ -1,5 +1,5 @@
 .Box {
   height: 10em;
   width: 10em;
-  display: inline-flex;
+  margin: 1em;
 }
