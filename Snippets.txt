@@ -1,0 +1,7 @@
+imrc →	import React, { Component } from 'react'
+exp →	export default moduleName
+fre →	arrayName.forEach(element => { }
+nfn →	const functionName = (params) => { }
+cp →	const { } = this.props
+cs →	const { } = this.state
+sst →	this.setState({ })

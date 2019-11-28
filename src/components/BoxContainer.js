@@ -8,7 +8,7 @@ class BoxContainer extends Component {
     numberOfBoxes: 24,
   }
 
-  componentDidMount() {
+  componentDidMount ()  {
     new WOW().init()
   }
 
@@ -29,4 +29,6 @@ class BoxContainer extends Component {
   }
 }
 
-export default BoxContainer;
+  export default BoxContainer;
+  
+  
