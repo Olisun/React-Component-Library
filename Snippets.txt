@@ -1,7 +1,21 @@
-imrc →	import React, { Component } from 'react'
+rce →	import React, { Component } from 'react'
+      export class FileName extends Component {
+        render() {
+          return <></>
+        }
+      }
+      export default FileName
+
+imrc → import React, { Component } from 'react'
+
 exp →	export default moduleName
+
 fre →	arrayName.forEach(element => { }
+
 nfn →	const functionName = (params) => { }
-cp →	const { } = this.props
-cs →	const { } = this.state
+
+cp → const { } = this.props
+
+cs → const { } = this.state
+
 sst →	this.setState({ })

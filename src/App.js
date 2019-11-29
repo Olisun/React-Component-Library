@@ -19,6 +19,7 @@ import State5 from './components/State5-Lottery';
 import CoinContainer from './components/CoinContainer';
 import Flip from './components/Flip';
 import BoxContainer from './components/BoxContainer';
+import DiceRoll from './components/DiceRoll';
 
 
 class App extends Component {
@@ -89,6 +90,7 @@ class App extends Component {
         <State3 />
         <State4 />
         <State5 />
+        <DiceRoll />
         <Flip />
         <Text
           field1={fieldOne}
@@ -107,3 +109,7 @@ class App extends Component {
   }
 }
 export default App;
+
+
+
+
