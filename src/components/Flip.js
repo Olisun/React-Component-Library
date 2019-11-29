@@ -17,7 +17,6 @@ class Flip extends Component {
           <FlipCard />
         </div>
       </div>
-
     )
   }
 }

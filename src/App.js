@@ -20,6 +20,8 @@ import CoinContainer from './components/CoinContainer';
 import Flip from './components/Flip';
 import BoxContainer from './components/BoxContainer';
 import DiceRoll from './components/DiceRoll';
+import ButtonList from './components/ButtonList';
+import NumberList from './components/NumberList';
 
 
 class App extends Component {
@@ -91,6 +93,8 @@ class App extends Component {
         <State4 />
         <State5 />
         <DiceRoll />
+        <ButtonList />
+        <NumberList />
         <Flip />
         <Text
           field1={fieldOne}
