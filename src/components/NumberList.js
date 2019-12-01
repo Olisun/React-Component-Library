@@ -8,7 +8,7 @@ class NumberList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      numbers: [1, 2, 3, 4, 5]
+      numbers: [1, 2, 2, 3, 4, 5]
     }
   }
 
@@ -24,8 +24,9 @@ class NumberList extends Component {
 
   render() {
     const { numbers } = this.state;
-    let numberList = numbers.map(number => (
+    let numberList = numbers.map((number, i) => (
       <NumberItem
+        key={i}
         value={number}
         remove={this.Remove}
       />

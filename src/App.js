@@ -22,6 +22,7 @@ import BoxContainer from './components/BoxContainer';
 import DiceRoll from './components/DiceRoll';
 import ButtonList from './components/ButtonList';
 import NumberList from './components/NumberList';
+import Hangman from './components/Hangman';
 
 
 class App extends Component {
@@ -107,6 +108,7 @@ class App extends Component {
         <Example />
         <CoinContainer />
         <BoxContainer />
+        <Hangman />
         <Imagedex />
       </div>
     )
