@@ -8,20 +8,31 @@ rce →	import React, { Component } from 'react'
 
 imrc → import React, { Component } from 'react'
 
+rconc →	constructor(props, context) with this.state
+
+est →	this.state = { }
+
+sst →	this.setState({ })
+
+cp → const { } = this.props
+
+cs → const { } = this.state
+
+cdm →	componentDidMount = () => { }
+
+ren →	render() { return( ) }
+
 exp →	export default moduleName
 
 fre →	arrayName.forEach(element => { }
 
 nfn →	const functionName = (params) => { }
 
-cp → const { } = this.props
 
-cs → const { } = this.state
 
-est →	this.state = { }
 
-sst →	this.setState({ })
 
-rconc →	constructor(props, context) with this.state
+
+
 
 
