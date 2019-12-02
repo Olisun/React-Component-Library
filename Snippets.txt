@@ -18,4 +18,10 @@ cp → const { } = this.props
 
 cs → const { } = this.state
 
+est →	this.state = { }
+
 sst →	this.setState({ })
+
+rconc →	constructor(props, context) with this.state
+
+

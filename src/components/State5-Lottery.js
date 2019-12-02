@@ -62,7 +62,6 @@ class State5 extends Component {
           </section>
         </div>
       </div>
-
     )
   }
 }
