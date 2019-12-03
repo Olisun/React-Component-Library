@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Col, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import Button from '@material-ui/core/Button';
+import { WOW } from 'wowjs/dist/wow';
 
 class Example extends Component {
   constructor(props) {
@@ -9,6 +11,10 @@ class Example extends Component {
     }
   }
 
+  componentDidMount() {
+    new WOW().init()
+  }
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -16,10 +22,10 @@ class Example extends Component {
     });
   };
 
-
   handleFormSubmit = event => {
+    const { textInput } = this.state
     event.preventDefault();
-    alert(`Hello ${this.state.textInput}`);
+    alert(`You typed ${textInput}`);
     this.setState({
       textInput: ""
     });
@@ -27,22 +33,49 @@ class Example extends Component {
 
   render() {
     const { textInput } = this.state;
+    const myStyles = {
+      marginLeft: '10px',
+      marginTop: '5px',
+      marginBottom: '10px',
+    }
+    const myStyles2 = {
+      color: 'red',
+      fontSize: '2em'
+    }
     return (
-      <div className="styleOne">
-        <Form>
-          <FormGroup row>
-            <Label for="text" sm={1}>Text</Label>
-            <Col sm={5}>
-              <Input value={textInput} onChange={this.handleInputChange} type="text" name="textInput" id="text" placeholder="with a placeholder" />
-            </Col>
-          </FormGroup>
-
-          <FormGroup check row>
-            <Col sm={{ size: 1, offset: 2 }}>
-              <Button onClick={this.handleFormSubmit}>Submit</Button>
-            </Col>
-          </FormGroup>
-        </Form>
+      <div className="wow zoomIn slow">
+        <div className="styleOne">
+          <Form>
+            <FormGroup row>
+              <Label
+                for="text"
+                sm={2}
+                style={myStyles2}>
+                Captured State: {textInput}
+              </Label>
+              <Col sm={5}>
+                <Input
+                  value={textInput}
+                  onChange={this.handleInputChange}
+                  type="text"
+                  name="textInput"
+                  id="text"
+                />
+              </Col>
+            </FormGroup>
+            <FormGroup check row>
+              <Col sm={{ size: 1, offset: 2 }}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  style={myStyles}
+                  onClick={this.handleFormSubmit}>
+                  Submit
+                </Button>
+              </Col>
+            </FormGroup>
+          </Form>
+        </div>
       </div>
     );
   }
