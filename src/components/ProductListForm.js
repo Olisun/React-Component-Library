@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button';
 
-class FormListForm extends Component {
+class ProductListForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      name: "",
-      type: ""
+      product: "",
+      price: ""
     }
   }
 
@@ -18,17 +18,17 @@ class FormListForm extends Component {
   };
 
   handleFormSubmit = event => {
-    const { addTodo } = this.props;
+    const { addProduct } = this.props;
     event.preventDefault();
-    addTodo(this.state);
+    addProduct(this.state);
     this.setState({
-      name: "",
-      type: ""
+      product: "",
+      price: ""
     })
   }
 
   render() {
-    const { name, type } = this.state
+    const { product, price } = this.state
     const myStyles = {
       marginLeft: '10px',
       marginTop: '5px',
@@ -36,18 +36,19 @@ class FormListForm extends Component {
     }
     return (
       <form>
-        <label htmlFor="name">Name: </label>
+        <label htmlFor="product">New Product: </label>
         <input
-          id="name"
-          name="name"
-          value={name}
+          id="product"
+          name="product"
+          value={product}
           onChange={this.handleInputChange}
         />
-        <label htmlFor="type">Type: </label>
+        <label htmlFor="price">Price: </label>
         <input
-          id="type"
-          name="type"
-          value={type}
+          id="price"
+          name="price"
+          type="number"
+          value={price}
           onChange={this.handleInputChange}
         />
         <Button
@@ -62,4 +63,4 @@ class FormListForm extends Component {
   }
 }
 
-export default FormListForm
+export default ProductListForm;
