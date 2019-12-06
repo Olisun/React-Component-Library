@@ -8,46 +8,46 @@ class ProductList extends Component {
     super(props)
     this.state = {
       products: [
-        {
-          product: "Martin Guitar",
-          price: 3000,
-          id: uuid()
-        },
-        {
-          product: "TV",
-          price: 1000,
-          id: uuid()
-        },
-        {
-          product: "MacBook",
-          price: 5000,
-          id: uuid()
-        },
-        {
-          product: "iPhone",
-          price: 1000,
-          id: uuid()
-        },
-        {
-          product: "iPad",
-          price: 1000,
-          id: uuid()
-        },
-        {
-          product: "Apple Watch",
-          price: 500,
-          id: uuid()
-        },
-        {
-          product: "Air Relax",
-          price: 400,
-          id: uuid()
-        },
-        {
-          product: "Leather Jacket",
-          price: 500,
-          id: uuid()
-        },
+        // {
+        //   product: "Martin Guitar",
+        //   price: 3000,
+        //   id: uuid()
+        // },
+        // {
+        //   product: "TV",
+        //   price: 1000,
+        //   id: uuid()
+        // },
+        // {
+        //   product: "MacBook",
+        //   price: 5000,
+        //   id: uuid()
+        // },
+        // {
+        //   product: "iPhone",
+        //   price: 1000,
+        //   id: uuid()
+        // },
+        // {
+        //   product: "iPad",
+        //   price: 1000,
+        //   id: uuid()
+        // },
+        // {
+        //   product: "Apple Watch",
+        //   price: 500,
+        //   id: uuid()
+        // },
+        // {
+        //   product: "Air Relax",
+        //   price: 400,
+        //   id: uuid()
+        // },
+        // {
+        //   product: "Leather Jacket",
+        //   price: 500,
+        //   id: uuid()
+        // },
       ]
     }
   }

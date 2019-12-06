@@ -23,6 +23,7 @@ import DiceRoll from './components/DiceRoll';
 import ButtonList from './components/ButtonList';
 import NumberList from './components/NumberList';
 import FormList from './components/FormList';
+import FormBoxList from './components/FormBoxList';
 import ProductList from './components/ProductList';
 import Hangman from './components/Hangman';
 import Board from './components/Board';
@@ -110,6 +111,7 @@ class App extends Component {
         <Form />
         <Example />
         <FormList />
+        <FormBoxList />
         <ProductList />
         <CoinContainer />
         <BoxContainer />
