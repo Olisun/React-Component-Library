@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import Todo from './Todo';
-import TodoNewTodo from './TodoNewTodo.js';
 import uuid from "uuid/v4";
 import { WOW } from 'wowjs/dist/wow';
+import Todo from './Todo';
+import TodoNewTodo from './TodoNewTodo';
+import './Todo.css';
 
 class TodoList extends Component {
   constructor(props) {
@@ -91,13 +92,17 @@ class TodoList extends Component {
     return (
       <div className="wow zoomIn slow">
         <div className="styleOne">
-          <h1>My Todo List</h1>
-          <ul>
-            {Todos}
-          </ul>
-          <TodoNewTodo
-            createTodo={this.createTodo}
-          />
+          <div className="background">
+            <div className="TodoList">
+              <h1>My Todo List</h1>
+              <ul>
+                {Todos}
+              </ul>
+              <TodoNewTodo className="TodoList"
+                createTodo={this.createTodo}
+              />
+            </div>
+          </div>
         </div>
       </div>
     )
