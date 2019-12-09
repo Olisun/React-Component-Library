@@ -25,7 +25,7 @@ class FormBoxList extends Component {
   removeBox = (id) => {
     const { boxes } = this.state;
     this.setState({
-      boxes: boxes.filter(box => box.id !== box.id)  // <-- filter makes a new array with all boxes who's unique id does not equal the id of the box being removed.
+      boxes: boxes.filter(box => box.id !== id)  // <-- filter makes a new array with all boxes who's unique id does not equal the id of the box being removed.
     })
   }
 

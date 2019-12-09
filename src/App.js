@@ -25,6 +25,7 @@ import NumberList from './components/NumberList';
 import FormList from './components/FormList';
 import FormBoxList from './components/FormBoxList';
 import ProductList from './components/ProductList';
+import TodoList from './components/TodoList';
 import Hangman from './components/Hangman';
 import Board from './components/Board';
 
@@ -115,6 +116,7 @@ class App extends Component {
         <ProductList />
         <CoinContainer />
         <BoxContainer />
+        <TodoList />
         <Hangman />
         <Board />
         <Imagedex />
