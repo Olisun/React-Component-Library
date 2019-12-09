@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button';
 import uuid from "uuid/v4";
+import './Todo.css';
 
 class TodoNewTodo extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class TodoNewTodo extends Component {
 
   handleClick = event => {
     const { createTodo } = this.props;
-    const newTodo = { ...this.state, key: uuid(), id: uuid() };
+    const newTodo = { ...this.state, key: uuid(), id: uuid(), completed: false };
     event.preventDefault();
     createTodo(newTodo);
     this.setState({
@@ -35,7 +36,7 @@ class TodoNewTodo extends Component {
       marginBottom: '10px',
     }
     return (
-      <form>
+      <form className="NewTodoForm">
         <label htmlFor="task">New Todo</label>
         <input
           type="text"

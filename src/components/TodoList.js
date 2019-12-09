@@ -55,6 +55,19 @@ class TodoList extends Component {
     });
   }
 
+  crossOutTodo = (id) => {
+    const { todos } = this.state;
+    const updatedTodos = todos.map(todo => {
+      if (todo.id === id) {
+        return { ...todo, completed: !todo.completed }
+      }
+      return todo;
+    })
+    this.setState({
+      todos: updatedTodos
+    });
+  }
+
   render() {
     const { todos, todo } = this.state
     const myStyles = {
@@ -68,8 +81,10 @@ class TodoList extends Component {
           task={todo.task}
           id={todo.id}
           key={todo.key}
+          completed={todo.completed}
           removeTodo={this.removeTodo}
           updateTodo={this.updateTodo}
+          crossOutTodo={this.crossOutTodo}
         />
       )
     })

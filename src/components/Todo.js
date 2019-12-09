@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button';
+import './Todo.css';
 
 class Todo extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class Todo extends Component {
     }
   }
 
-  toggleForm = () => {
+  handleEdit = () => {
     const { isEditing } = this.state;
     this.setState({
       isEditing: !isEditing
@@ -40,8 +41,13 @@ class Todo extends Component {
     });
   }
 
+  handleCrossOutTodo = () => {
+    const { crossOutTodo, id } = this.props;
+    crossOutTodo(id);
+  }
+
   render() {
-    const { task, removeTodo } = this.props;
+    const { task, completed } = this.props;
     const { isEditing } = this.state;
     const myStyles = {
       marginLeft: '10px',
@@ -72,9 +78,13 @@ class Todo extends Component {
     } else {
       result = (
         <div>
-          {task}
+          <li
+            className={completed ? "completed" : ""}
+            onClick={this.handleCrossOutTodo}>
+            {task}
+          </li>
           <Button
-            onClick={this.toggleForm}
+            onClick={this.handleEdit}
             variant="contained"
             color="primary"
             style={myStyles}>
