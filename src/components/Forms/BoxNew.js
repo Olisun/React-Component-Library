@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button';
 import uuid from "uuid/v4";
-import Form from './Form';
 
-class FormBoxNew extends Component {
+
+class BoxNew extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -77,4 +77,4 @@ class FormBoxNew extends Component {
   }
 }
 
-export default FormBoxNew;
+export default BoxNew;

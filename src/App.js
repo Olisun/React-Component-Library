@@ -8,26 +8,28 @@ import SlotOne from './components/Conditionals';
 import Person from './components/Mapping';
 import Fruits from './components/RandomFruits';
 import Imagedex from './components/Imagedex';
-import State from './components/State';
-import State2 from './components/State2-Button';
-import State3 from './components/State3-Buttons';
-import State4 from './components/State4-Object';
-import Text from './components/TextField';
-import Form from './components/Form';
-import Example from './components/Form-Bootstrap'
-import State5 from './components/State5-Lottery';
-import CoinContainer from './components/CoinContainer';
-import Flip from './components/Flip';
-import BoxContainer from './components/BoxContainer';
-import DiceRoll from './components/DiceRoll';
+import State from './components/State/State';
+import State2 from './components/State/State2-Button';
+import State3 from './components/State/State3-Buttons';
+import State4 from './components/State/State4-Object';
+import MaterialTextField from './components/Forms/MaterialTextField';
+import Form from './components/Forms/Form';
+import BootstrapExample from './components/Forms/Form-Bootstrap'
+import Lotto from './components/State/Lotto/Lotto';
+import CoinContainer from './components/Coinflip-Exercise/CoinContainer';
+import Flip from './components/FlipCard/Flip';
+import BoxContainer from './components/Box-Exercise/BoxContainer';
+import DiceRoll from './components/Dice-Exercise/DiceRoll';
 import ButtonList from './components/ButtonList';
 import NumberList from './components/NumberList';
-import FormList from './components/FormList';
-import FormBoxList from './components/FormBoxList';
+import MyDailyList from './components/Forms/MyDailyList';
+import BoxList from './components/Forms/BoxList';
 import ProductList from './components/ProductList';
-import TodoList from './components/TodoList';
-import Hangman from './components/Hangman';
-import Board from './components/Board';
+import TodoList from './components/TodoList/TodoList';
+import Hangman from './components/Hangman/Hangman';
+import Board from './components/LightsOut-Exercise/Board';
+import Yahtzee from './components/Yahtzee/Game';
+
 
 
 class App extends Component {
@@ -97,28 +99,28 @@ class App extends Component {
         <State2 />
         <State3 />
         <State4 />
-        <State5 />
+        <Lotto />
         <DiceRoll />
         <ButtonList />
         <NumberList />
         <Flip />
-        <Text
+        <MaterialTextField
           field1={fieldOne}
           field2={fieldTwo}
           field3={fieldThree}
           onChange={this.handleInputChange}
-        // onChange={this.handleTextChange}
         />
         <Form />
-        <Example />
-        <FormList />
-        <FormBoxList />
+        <BootstrapExample />
+        <MyDailyList />
+        <BoxList />
         <ProductList />
         <CoinContainer />
         <BoxContainer />
         <TodoList />
         <Hangman />
         <Board />
+        <Yahtzee />
         <Imagedex />
       </div>
     )

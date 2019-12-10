@@ -3,7 +3,7 @@ import { Col, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import Button from '@material-ui/core/Button';
 import { WOW } from 'wowjs/dist/wow';
 
-class Example extends Component {
+class BootstrapExample extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -81,4 +81,4 @@ class Example extends Component {
   }
 }
 
-export default Example;
+export default BootstrapExample;

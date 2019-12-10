@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Text = (props) => {
+const MaterialTextfield = (props) => {
   const classes = useStyles();
 
   return (
@@ -46,4 +46,4 @@ const Text = (props) => {
   );
 }
 
-export default Text;
+export default MaterialTextfield;

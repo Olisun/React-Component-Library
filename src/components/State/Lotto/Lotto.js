@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import Ball from './Ball';
 import { WOW } from 'wowjs/dist/wow';
 
-class State5 extends Component {
+class Lotto extends Component {
   static defaultProps = {
     title: 'Lotto',
     maxBalls: 6,
@@ -66,4 +66,4 @@ class State5 extends Component {
   }
 }
 
-export default State5;
+export default Lotto;

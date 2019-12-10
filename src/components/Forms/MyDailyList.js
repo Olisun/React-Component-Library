@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { WOW } from 'wowjs/dist/wow';
 import uuid from "uuid/v4";
-import FormListForm from './FormListForm';
+import MyDailyListForm from './MyDailyListForm';
 
-class FormList extends Component {
+class MyDailyList extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -46,11 +46,11 @@ class FormList extends Component {
         <div className="styleOne">
           <h1>My Daily List</h1>
           {this.renderTodos()}
-          <FormListForm addTodo={this.addTodo} />
+          <MyDailyListForm addTodo={this.addTodo} />
         </div>
       </div>
     )
   }
 }
 
-export default FormList;
+export default MyDailyList;

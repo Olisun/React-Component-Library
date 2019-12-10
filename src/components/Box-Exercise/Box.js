@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Box.css';
 import { ThemeProvider } from '@material-ui/styles';
-import choice from './Helpers'
+import choice from '../Helpers'
 
 class Box extends Component {
   static defaultProps = {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button';
 
-class FormListForm extends Component {
+class MyDailyListForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -62,4 +62,4 @@ class FormListForm extends Component {
   }
 }
 
-export default FormListForm
+export default MyDailyListForm;

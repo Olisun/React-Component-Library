@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import FormBox from './FormBox';
-import FormBoxNew from './FormBoxNew';
+import FormBox from './Box';
+import BoxNew from './BoxNew';
 import { WOW } from 'wowjs/dist/wow';
 
-class FormBoxList extends Component {
+class BoxList extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -45,7 +45,7 @@ class FormBoxList extends Component {
       <div className="wow zoomIn slow">
         <div className="styleOne">
           <h1>Box Maker</h1>
-          <FormBoxNew
+          <BoxNew
             createBox={this.createBox}
           />
           {boxesForRender}
@@ -55,4 +55,4 @@ class FormBoxList extends Component {
   }
 }
 
-export default FormBoxList;
+export default BoxList;

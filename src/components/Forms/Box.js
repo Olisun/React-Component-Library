@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button';
 
-class FormBox extends Component {
+class Box extends Component {
   render() {
     const { height, width, color, removeBox } = this.props;
     const myStyles = {
@@ -29,4 +29,4 @@ class FormBox extends Component {
   }
 }
 
-export default FormBox;
+export default Box;
