@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Images from './Images';
-import images from '../images.json';
+import images from './images.json';
 import './Imagedex.css';
 import { WOW } from 'wowjs/dist/wow';
 

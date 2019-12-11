@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './Images.css'
-import image from '../images'
+import './Images.css';
+import image from './images.json';
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button

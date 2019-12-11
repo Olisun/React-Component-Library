@@ -19,9 +19,9 @@ class ButtonList extends Component {
     new WOW().init()
   }
 
-  changeColor = (dog) => {
-    console.log(`new color is ${dog}`);
-    this.setState({ color: dog });
+  changeColor = (color) => {
+    console.log(`new color is ${color}`);
+    this.setState({ color: color });
   }
 
   render() {
