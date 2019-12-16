@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { WOW } from 'wowjs/dist/wow';
 import Dice from "./Dice";
 import ScoreTable from "./ScoreTable";
 import "./Game.css";
@@ -31,6 +32,10 @@ class Yahtzee extends Component {
     };
     this.roll = this.roll.bind(this);
     this.doScore = this.doScore.bind(this);
+  }
+
+  componentDidMount() {
+    new WOW().init()
   }
 
   roll(evt) {
@@ -67,28 +72,32 @@ class Yahtzee extends Component {
 
   render() {
     return (
-      <div className='Game'>
-        <header className='Game-header'>
-          <h1 className='App-title'>Yahtzee!</h1>
+      <div className="wow zoomIn slow">
+        <div className="styleOne">
+          <div className='Game'>
+            <header className='Game-header'>
+              <h1 className='App-title'>Yahtzee!</h1>
 
-          <section className='Game-dice-section'>
-            <Dice
-              dice={this.state.dice}
-              locked={this.state.locked}
-              handleClick={this.toggleLocked}
-            />
-            <div className='Game-button-wrapper'>
-              <button
-                className='Game-reroll'
-                disabled={this.state.locked.every(x => x)}
-                onClick={this.roll}
-              >
-                {this.state.rollsLeft} Rerolls Left
+              <section className='Game-dice-section'>
+                <Dice
+                  dice={this.state.dice}
+                  locked={this.state.locked}
+                  handleClick={this.toggleLocked}
+                />
+                <div className='Game-button-wrapper'>
+                  <button
+                    className='Game-reroll'
+                    disabled={this.state.locked.every(x => x)}
+                    onClick={this.roll}
+                  >
+                    {this.state.rollsLeft} Rerolls Left
               </button>
-            </div>
-          </section>
-        </header>
-        <ScoreTable doScore={this.doScore} scores={this.state.scores} />
+                </div>
+              </section>
+            </header>
+            <ScoreTable doScore={this.doScore} scores={this.state.scores} />
+          </div>
+        </div>
       </div>
     );
   }

@@ -16,7 +16,7 @@ import MaterialTextField from './components/Forms/MaterialTextField';
 import Form from './components/Forms/Form';
 import BootstrapExample from './components/Forms/Form-Bootstrap'
 import Lotto from './components/State/Lotto/Lotto';
-import CoinContainer from './components/Coinflip-Exercise/CoinContainer';
+import CoinContainer from './components/State/Coinflip-Exercise/CoinContainer';
 import Flip from './components/FlipCard/Flip';
 import BoxContainer from './components/Box-Exercise/BoxContainer';
 import DiceRoll from './components/State/Dice-Exercise/DiceRoll';
@@ -29,6 +29,7 @@ import TodoList from './components/Forms/TodoList/TodoList';
 import Hangman from './components/State/Hangman/Hangman';
 import Board from './components/State/LightsOut-Exercise/Board';
 import Yahtzee from './components/Yahtzee/Game';
+import AjaxExp from './components/Life-Cycles/AjaxExp';
 
 
 
@@ -121,6 +122,7 @@ class App extends Component {
         <Hangman />
         <Board />
         <Yahtzee />
+        <AjaxExp />
         <Imagedex />
       </div>
     )

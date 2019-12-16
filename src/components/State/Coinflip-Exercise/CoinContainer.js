@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button';
 import { WOW } from 'wowjs/dist/wow';
-import choice from '../Helpers'
+import choice from '../../Helpers'
 import Coin from './Coin';
 
 class CoinContainer extends Component {
