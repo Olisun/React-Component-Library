@@ -30,6 +30,7 @@ import Hangman from './components/State/Hangman/Hangman';
 import Board from './components/State/LightsOut-Exercise/Board';
 import Yahtzee from './components/Yahtzee/Game';
 import AjaxExp from './components/Life-Cycles/AjaxExp';
+import GitHubUserInfo from './components/Life-Cycles/GitHubUserInfo';
 
 
 
@@ -123,6 +124,9 @@ class App extends Component {
         <Board />
         <Yahtzee />
         <AjaxExp />
+        <GitHubUserInfo
+          username="Oliver"
+        />
         <Imagedex />
       </div>
     )
