@@ -85,7 +85,7 @@ class Form extends Component {
               placeholder="Last Name"
             />
             <input
-              value={parseInt(number1)}  // <-- value is the important prop!
+              value={number1}  // <-- value is the important prop!
               name="number1"  // <-- name is needed for handleInputChange to work!
               onChange={this.handleInputChange}
               type="number"

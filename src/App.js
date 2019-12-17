@@ -31,6 +31,7 @@ import Board from './components/State/LightsOut-Exercise/Board';
 import Yahtzee from './components/Yahtzee/Game';
 import AjaxExp from './components/Life-Cycles/AjaxExp';
 import GitHubUserInfo from './components/Life-Cycles/GitHubUserInfo';
+import Deck from './components/Life-Cycles/Deck-of-Cards/Deck';
 
 
 
@@ -126,7 +127,7 @@ class App extends Component {
         <AjaxExp />
         <GitHubUserInfo username="Oliver" />
         <GitHubUserInfo username="facebook" />
-        <GitHubUserInfo username="RonMelendres" />
+        <Deck />
         <Imagedex />
       </div>
     )
