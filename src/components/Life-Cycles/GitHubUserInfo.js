@@ -7,7 +7,9 @@ class GitHubUserInfo extends Component {
   constructor(props) {
     super(props)
     this.state = {
-
+      imgURL: "",
+      name: "",
+      repos: ""
     }
   }
 
@@ -18,17 +20,25 @@ class GitHubUserInfo extends Component {
     const { username } = this.props;
     const url = `https://api.github.com/users/${username}`;
     let response = await axios.get(url);
-    console.log(response.data)
+    let data = response.data;
+    console.log(data)
+    this.setState({
+      imgURL: data.avatar_url,
+      name: data.name,
+      repos: data.repos_url
+    })
   }
 
 
   render() {
-    const { username } = this.props;
+    const { username, username2 } = this.props;
+    const { imgURL, name, repos } = this.state;
     return (
       <div className="wow zoomIn slow">
         <div className="styleOne">
-          <h1>GitHub User Info</h1>
-          {username}
+          <h1>GitHub User: {username}</h1>
+          <img src={imgURL} />
+          <p>Repos: {repos}</p>
         </div>
       </div>
     )

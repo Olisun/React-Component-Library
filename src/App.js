@@ -124,9 +124,9 @@ class App extends Component {
         <Board />
         <Yahtzee />
         <AjaxExp />
-        <GitHubUserInfo
-          username="Oliver"
-        />
+        <GitHubUserInfo username="Oliver" />
+        <GitHubUserInfo username="facebook" />
+        <GitHubUserInfo username="RonMelendres" />
         <Imagedex />
       </div>
     )
