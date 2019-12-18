@@ -8,14 +8,15 @@ class Deck extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      deck: null
+      deck: null,
+      drawn: []
     };
     this.getCard = this.getCard.bind(this);
   }
 
   async componentDidMount() {
     new WOW().init();
-    let deck = await axios.get(`${API_BASE_URL}$/new/shuffle/`);
+    let deck = await axios.get(`${API_BASE_URL}/new/shuffle/`);
     this.setState({
       deck: deck.data
     });
@@ -23,11 +24,29 @@ class Deck extends Component {
 
   // Can't use arrow functions for async await. 
   async getCard() {
-    // const { deck } = this.state;
-    let id = this.state.deck.deck_id;
-    let cardURL = `${API_BASE_URL}/${id}/draw/`;
-    let cardResponse = await axios.get("cardURL");
-    console.log(cardResponse.data);
+    const { deck } = this.state;
+    let id = deck.deck_id;
+    try {  // <-- try catch throws an error when all 52 cards are drawn.
+      let cardURL = `${API_BASE_URL}/${id}/draw/`;
+      let cardResponse = await axios.get(cardURL);  // <-- gets individual card.
+      if (!cardResponse.data.success) {  // <-- data.success is a data pair from the API.
+        throw new Error("No more cards!");
+      }
+      console.log(cardResponse.data);
+      let card = cardResponse.data.cards[0];
+      this.setState(state => ({  // <-- using callback method here for setting state. This sst updates the drawn array.
+        drawn: [  // <-- drawn is a new array that contains everything from the old array
+          ...state.drawn,  // <-- gives all the existing data
+          {
+            id: card.code,
+            image: card.image,
+            name: `${card.suit} ${card.value}`
+          }
+        ]
+      }));
+    } catch (error) {
+      alert(error);
+    }
   }
 
   render() {
@@ -46,8 +65,8 @@ class Deck extends Component {
             variant="contained"
             color="primary"
             style={myStyles}>
-            Add New Box
-        </Button>
+            Get Card
+          </Button>
         </div>
       </div>
     )
