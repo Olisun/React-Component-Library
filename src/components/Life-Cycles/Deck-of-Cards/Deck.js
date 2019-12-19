@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { WOW } from 'wowjs/dist/wow';
 import Button from '@material-ui/core/Button';
 import axios from 'axios';
+import Card from './Card';
+import './Deck.css';
 const API_BASE_URL = "https://deckofcardsapi.com/api/deck/";
 
 class Deck extends Component {
@@ -50,16 +52,23 @@ class Deck extends Component {
   }
 
   render() {
-    const { deck } = this.state;
+    const { deck, drawn } = this.state;
     const myStyles = {
-      marginLeft: '10px',
-      marginTop: '5px',
-      marginBottom: '10px',
+      marginLeft: '-750px',
+      marginTop: '200px',
+      marginBottom: '200px',
     }
+    const cards = drawn.map(card => (  // <-- getting the card from the drawn array which gets the data from the API
+      <Card
+        key={card.id}
+        name={card.name}
+        image={card.image}
+      />
+    ))
     return (
       <div className="wow zoomIn slow">
-        <div className="styleOne">
-          <h1>Deck of Cards</h1>
+        <div className="styleThree">
+          <h1>Cards</h1>
           <Button
             onClick={this.getCard}
             variant="contained"
@@ -67,6 +76,9 @@ class Deck extends Component {
             style={myStyles}>
             Get Card
           </Button>
+          <div className="deck-container">
+            {cards}
+          </div>
         </div>
       </div>
     )

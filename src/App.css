@@ -28,6 +28,23 @@
   background-color: white;
 }
 
+.styleThree {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding-left: 0px;
+  padding-right: 00px;
+  border: 1px solid black;
+  box-shadow: 7px 10px 5px -3px rgba(0, 0, 0, 0.56);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: white;
+  height: 400px;
+}
+
 .winner {
   color: purple;
 }
@@ -52,6 +69,6 @@
   visibility: hidden;
 }
 
- .body {
-   background-color: #dbd8ec
- }
+.body {
+  background-color: #dbd8ec
+}
