@@ -129,9 +129,7 @@ class App extends Component {
         <GitHubUserInfo username="Oliver" />
         <GitHubUserInfo username="facebook" />
         <Deck />
-        <JokeList
-          propTest={" - Passing something down"}
-        />
+        <JokeList />
         <Imagedex />
       </div>
     )
