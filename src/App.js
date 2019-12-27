@@ -32,6 +32,7 @@ import Yahtzee from './components/Yahtzee/Game';
 import AjaxExp from './components/Life-Cycles/AjaxExp';
 import GitHubUserInfo from './components/Life-Cycles/GitHubUserInfo';
 import Deck from './components/Life-Cycles/Deck-of-Cards/Deck';
+import JokeList from './components/Life-Cycles/Dad-Jokes/JokeList';
 
 
 
@@ -128,6 +129,9 @@ class App extends Component {
         <GitHubUserInfo username="Oliver" />
         <GitHubUserInfo username="facebook" />
         <Deck />
+        <JokeList
+          propTest={" - Passing something down"}
+        />
         <Imagedex />
       </div>
     )
