@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { WOW } from 'wowjs/dist/wow';
 import axios from 'axios';
 import Joke from './Joke';
-import './Joke.css';
+import './JokeList.css';
 
 class JokeList extends Component {
   static defaultProps = {
@@ -42,12 +42,20 @@ class JokeList extends Component {
     return (
       <div className="wow zoomIn slow">
         <div className="styleOne">
-          <div className="JokeList">
-            <h1>Dad Jokes</h1>
-            <div className="JokeList-Jokes">
-              {jokes.map(joke => (
-                <div>{joke}</div>
-              ))}
+          <div className="App-Container">
+            <div className="JokeList">
+              <div className="JokeList-Sidebar">
+                <h1 className="JokeList-Title">
+                  <span>Dad</span> Jokes
+                </h1>
+                <img src='https://assets.dryicons.com/uploads/icon/svg/8927/0eb14c71-38f2-433a-bfc8-23d9c99b3647.svg' />
+                <button className="get-more">New Jokes</button>
+              </div>
+              <div className="JokeList-Jokes">
+                {jokes.map(joke => (
+                  <div>{joke}</div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
