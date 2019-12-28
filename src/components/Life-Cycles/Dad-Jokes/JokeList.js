@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { WOW } from 'wowjs/dist/wow';
 import axios from 'axios';
+import uuid from "uuid/v4";
 import Joke from './Joke';
 import './JokeList.css';
 
@@ -28,12 +29,24 @@ class JokeList extends Component {
           Accept: "application/json"
         }
       });
-      jokes.push(response.data.joke);
+      jokes.push({
+        id: uuid(),
+        text: response.data.joke,
+        votes: 0
+      });
     }
     console.log(jokes);
     this.setState({
       jokes: jokes
     })
+  }
+
+  handleVote = (id, delta) => {
+    // Using callback method. Setting state to the old state first ad for each joke, is the id equal to the joke that was passed in. If it is, return the existing joke but set the votes to be current votes plus the change (delta) else return joke (unchanged joke)
+    this.setState(state => ({
+      jokes: state.jokes.map(joke =>
+        joke.id === id ? { ...joke, votes: joke.votes + delta } : joke)
+    }))
   }
 
   render() {
@@ -53,7 +66,11 @@ class JokeList extends Component {
               </div>
               <div className="JokeList-Jokes">
                 {jokes.map(joke => (
-                  <div>{joke}</div>
+                  <Joke
+                    key={joke.id}
+                    votes={joke.votes}
+                    text={joke.text}
+                  />
                 ))}
               </div>
             </div>
