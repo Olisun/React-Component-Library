@@ -68,5 +68,10 @@
     "id": 14,
     "image": "/images/wanda.png",
     "character": "Wanda Maximoff"
+  },
+  {
+    "id": 15,
+    "image": "/images/wanda.png",
+    "character": "Test"
   }
 ]

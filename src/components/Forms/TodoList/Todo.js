@@ -15,7 +15,7 @@ class Todo extends Component {
   handleEdit = () => {
     const { isEditing } = this.state;
     this.setState({
-      isEditing: !isEditing
+      isEditing: true
     })
   }
 

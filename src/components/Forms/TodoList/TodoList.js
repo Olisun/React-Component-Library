@@ -35,6 +35,7 @@ class TodoList extends Component {
     })
   }
 
+  // .filter returns a new array with every that does not have a matching id as the one you are deleting. 
   removeTodo = (id) => {
     const { todos } = this.state;
     this.setState({
@@ -76,7 +77,7 @@ class TodoList extends Component {
       marginTop: '5px',
       marginBottom: '10px',
     }
-    const Todos = this.state.todos.map(todo => {
+    const Todos = todos.map(todo => {
       return (
         <Todo
           task={todo.task}
